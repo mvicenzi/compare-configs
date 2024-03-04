@@ -1,0 +1,155 @@
+
+daq: {
+
+fragment_receiver: {
+#Number of FEBs
+generated_fragments_per_event: 20 
+#fragment_id convention: SBN docdb 16111
+fragment_ids: [0x32ba, 0x3253, 0x32fe, 0x32a6, 0x32b2, 0x3288, 0x32b8, 0x32f0, 0x32f2, 0x32bc, 0x323a, 0x328f, 0x32eb, 0x3286, 0x3281, 0x3291, 0x326e, 0x3285, 0x32a8, 0x32b3] 
+#Whether or not turn on bias HV on the individual FEBs. Size must be the same as FEBIDs
+TurnOnHV: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true] 
+#PPS signal delay w.r.t. GPS due to signal propagation time (primarily cable length)
+PPS_offset_ns: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+
+ethernet_port: crt3 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}
+FEBConfigurationMAC186: {
+ 
+#include "icaruscrttop_feb186.fcl" 
+
+}
+FEBConfigurationMAC83: {
+ 
+#include "icaruscrttop_feb83.fcl" 
+
+}
+FEBConfigurationMAC254: {
+ 
+#include "icaruscrttop_feb254.fcl" 
+
+}
+FEBConfigurationMAC166: {
+ 
+#include "icaruscrttop_feb166.fcl" 
+
+}
+FEBConfigurationMAC178: {
+ 
+#include "icaruscrttop_feb178.fcl" 
+
+}
+FEBConfigurationMAC136: {
+ 
+#include "icaruscrttop_feb136.fcl" 
+
+}
+FEBConfigurationMAC184: {
+ 
+#include "icaruscrttop_feb184.fcl" 
+
+}
+FEBConfigurationMAC240: {
+ 
+#include "icaruscrttop_feb240.fcl" 
+
+}
+FEBConfigurationMAC242: {
+ 
+#include "icaruscrttop_feb242.fcl" 
+
+}
+FEBConfigurationMAC188: {
+ 
+#include "icaruscrttop_feb188.fcl" 
+
+}
+FEBConfigurationMAC58: {
+ 
+#include "icaruscrttop_feb58.fcl" 
+
+}
+FEBConfigurationMAC143: {
+ 
+#include "icaruscrttop_feb143.fcl" 
+
+}
+FEBConfigurationMAC235: {
+ 
+#include "icaruscrttop_feb235.fcl" 
+
+}
+FEBConfigurationMAC134: {
+ 
+#include "icaruscrttop_feb134.fcl" 
+
+}
+FEBConfigurationMAC129: {
+ 
+#include "icaruscrttop_feb129.fcl" 
+
+}
+FEBConfigurationMAC145: {
+ 
+#include "icaruscrttop_feb145.fcl" 
+
+}
+FEBConfigurationMAC110: {
+ 
+#include "icaruscrttop_feb110.fcl" 
+
+}
+FEBConfigurationMAC133: {
+ 
+#include "icaruscrttop_feb133.fcl" 
+
+}
+FEBConfigurationMAC168: {
+ 
+#include "icaruscrttop_feb168.fcl" 
+
+}
+FEBConfigurationMAC179: {
+ 
+#include "icaruscrttop_feb179.fcl" 
+
+}
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+
+fileName: "/daq/log/metrics/crttop02L08_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+
+metricPluginType: "graphite" 
+
+reporting_interval: 15 
+
+host: "192.168.191.31" 
+
+port: 2003 
+
+namespace: "icarus.crttop02L08." 
+
+}
+}
+} 
+#include "icarus_crttop_common.fcl" 

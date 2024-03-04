@@ -1,0 +1,125 @@
+
+daq: {
+
+fragment_receiver: {
+#Number of FEBs
+generated_fragments_per_event: 14 
+#fragment_id convention: SBN docdb 16111
+fragment_ids: [0x32ac, 0x3272, 0x3264, 0x3296, 0x32ee, 0x32ea, 0x328a, 0x32aa, 0x3265, 0x328e, 0x3206, 0x32e8, 0x32ed, 0x32ef] 
+#Whether or not turn on bias HV on the individual FEBs. Size must be the same as FEBIDs
+TurnOnHV: [true, true, true, true, true, true, true, true, true, true, true, true, true, true] 
+#PPS signal delay w.r.t. GPS due to signal propagation time (primarily cable length)
+PPS_offset_ns: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+
+ethernet_port: crt1 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}
+FEBConfigurationMAC172: {
+ 
+#include "icaruscrttop_feb172.fcl" 
+
+}
+FEBConfigurationMAC114: {
+ 
+#include "icaruscrttop_feb114.fcl" 
+
+}
+FEBConfigurationMAC100: {
+ 
+#include "icaruscrttop_feb100.fcl" 
+
+}
+FEBConfigurationMAC150: {
+ 
+#include "icaruscrttop_feb150.fcl" 
+
+}
+FEBConfigurationMAC238: {
+ 
+#include "icaruscrttop_feb238.fcl" 
+
+}
+FEBConfigurationMAC234: {
+ 
+#include "icaruscrttop_feb234.fcl" 
+
+}
+FEBConfigurationMAC138: {
+ 
+#include "icaruscrttop_feb138.fcl" 
+
+}
+FEBConfigurationMAC170: {
+ 
+#include "icaruscrttop_feb170.fcl" 
+
+}
+FEBConfigurationMAC101: {
+ 
+#include "icaruscrttop_feb101.fcl" 
+
+}
+FEBConfigurationMAC142: {
+ 
+#include "icaruscrttop_feb142.fcl" 
+
+}
+FEBConfigurationMAC6: {
+ 
+#include "icaruscrttop_feb6.fcl" 
+
+}
+FEBConfigurationMAC232: {
+ 
+#include "icaruscrttop_feb232.fcl" 
+
+}
+FEBConfigurationMAC237: {
+ 
+#include "icaruscrttop_feb237.fcl" 
+
+}
+FEBConfigurationMAC239: {
+ 
+#include "icaruscrttop_feb239.fcl" 
+
+}
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+
+fileName: "/daq/log/metrics/crttop01L02_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+
+metricPluginType: "graphite" 
+
+reporting_interval: 15 
+
+host: "192.168.191.31" 
+
+port: 2003 
+
+namespace: "icarus.crttop01L02." 
+
+}
+}
+} 
+#include "icarus_crttop_common.fcl" 

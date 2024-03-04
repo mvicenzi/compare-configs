@@ -1,0 +1,75 @@
+
+daq: {
+
+fragment_receiver: {
+#third and fourth digit - last 8 bits of the MAC address
+fragment_ids: [0x3103, 0x3101, 0x3106, 0x3107] 
+
+generated_fragments_per_event: 4 
+#Whether or not turn on bias HV on the individual FEBs. Size must be the same as FEBIDs
+TurnOnHV: [true, true, true, true] 
+#How much the PPS signal coming to FEB is delayed due to cable length (normally should be > 0)
+PPS_offset_ns: [131, 151, 208, 228] #verified Apr 19, 2021
+
+ethernet_port: crt1 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}#FEB configuration
+FEBConfigurationMAC3: {
+ 
+#include "icaruscrt_feb_standard_320.fcl" 
+
+}
+FEBConfigurationMAC1: {
+ 
+#include "icaruscrt_feb_standard_320.fcl" 
+
+}
+FEBConfigurationMAC6: {
+ 
+#include "icaruscrt_feb_standard_320.fcl" 
+
+}
+FEBConfigurationMAC7: {
+ 
+#include "icaruscrt_feb_standard_320.fcl" 
+
+}
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+
+fileName: "/daq/log/metrics/crt01nni_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+
+metricPluginType: "graphite" 
+
+reporting_interval: 15 
+
+host: "192.168.191.31" 
+
+port: 2003 
+
+namespace: "icarus.crt01nni." 
+
+}
+}
+} 
+#include "icarus_crt_common.fcl" 

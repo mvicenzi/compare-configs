@@ -1,0 +1,332 @@
+
+daq: {
+
+fragment_receiver: {
+
+generator: CAENV1730Readout 
+
+fragment_type: CAENV1730 
+
+max_fragment_size_bytes: 30000000 
+
+GetNextFragmentBunchSize: 20 
+# They are overwritten for each board in their separate files
+fragment_id: 0 
+
+board_id: 0 
+
+Verbosity: 1 
+
+SWTrigger: false 
+# begin run ADC calibration
+CalibrateOnConfig: true 
+# read and write some calibration parameters
+AdcCalibration: true 
+# Turn on or off automatic mid-run temperature correction
+LockTempCalibration: true 
+# SBND: keep this parameter = 0
+ModeLVDS: 1 
+# Exclusive for ICARUS
+LVDSLogicValueG1: 3 
+
+LVDSLogicValueG2: 3 
+
+LVDSLogicValueG3: 3 
+
+LVDSLogicValueG4: 3 
+
+LVDSLogicValueG5: 3 
+
+LVDSLogicValueG6: 3 
+
+LVDSLogicValueG7: 3 
+
+LVDSLogicValueG8: 3 
+# Exclusive for ICARUS
+LVDSOutWidthC1: 20 
+
+LVDSOutWidthC2: 20 
+
+LVDSOutWidthC3: 20 
+
+LVDSOutWidthC4: 20 
+
+LVDSOutWidthC5: 20 
+
+LVDSOutWidthC6: 20 
+
+LVDSOutWidthC7: 20 
+
+LVDSOutWidthC8: 20 
+
+LVDSOutWidthC9: 20 
+
+LVDSOutWidthC10: 20 
+
+LVDSOutWidthC11: 20 
+
+LVDSOutWidthC12: 20 
+
+LVDSOutWidthC13: 20 
+
+LVDSOutWidthC14: 20 
+
+LVDSOutWidthC15: 20 
+
+LVDSOutWidthC16: 20 
+# Exclusive for ICARUS
+SelfTrigBit: 16 
+# SelfTriggerMode 0:DISABLED 1:ACQ_ONLY 2:TRGOUT_ONLY 3:ACQ_AND_TRGOUT
+SelfTriggerMode: 0 
+# 65535: all channels are enabled
+SelfTriggerMask: 255 
+# ICARUS: (should not interfere but) keep this parameter = 0
+majorityLevel: 0 
+# ICARUS: (should not interfere but) keep this parameter = 0
+majorityCoincidenceWindow: 0 
+# ICARUS: (should not interfere but) keep this parameter = 3
+triggerLogic: 3 
+
+allowTriggerOverlap: true 
+
+link: 0 
+
+enableReadout: 1 
+
+recordLength: 5000 
+
+maxEventsPerTransfer: 1 
+
+runSyncMode: 0 
+# ioLevel: 0=NIM, 1=TTL
+ioLevel: 1 
+
+nChannels: 16 
+# extTrgMode: 0=DISABLED; 1=ACQ_ONLY; 2=TRGOUT_ONLY; 3=ACQ_AND_TRGOUT
+extTrgMode: 3 
+# swTrgMode:  0=DISABLED; 1=ACQ_ONLY; 2=TRGOUT_ONLY; 3=ACQ_AND_TRGOUT
+swTrgMode: 0 
+# acqMode: 0=Software Controlled, 1=Front Panel S_IN
+acqMode: 0 
+# ICARUS: (should not interfere but) keep this parameter = 0
+triggerPolarity: 0 
+
+debugLevel: 7 
+
+postPercent: 70 
+# Use or not use the interrupts
+InterruptEnable: 0 
+# Timeout value
+IRQTimeoutMS: 100 
+
+eventsPerInterrupt: 1 
+
+irqWaitTime: 1 
+
+readoutMode: 0 
+
+testPattern: 0 
+# buffer ocuppancy mode: 3; voltage level mode: 4 
+analogMode: 1 
+# These are overwritten for each board in their separate files
+channelPedestal0: 6554 
+
+channelPedestal1: 6554 
+
+channelPedestal2: 6554 
+
+channelPedestal3: 6554 
+
+channelPedestal4: 6554 
+
+channelPedestal5: 6554 
+
+channelPedestal6: 6554 
+
+channelPedestal7: 6554 
+
+channelPedestal8: 6554 
+
+channelPedestal9: 6554 
+
+channelPedestal10: 6554 
+
+channelPedestal11: 6554 
+
+channelPedestal12: 6554 
+
+channelPedestal13: 6554 
+
+channelPedestal14: 6554 
+
+channelPedestal15: 6554 
+
+channelEnable0: true 
+
+channelEnable1: true 
+
+channelEnable2: true 
+
+channelEnable3: true 
+
+channelEnable4: true 
+
+channelEnable5: true 
+
+channelEnable6: true 
+
+channelEnable7: true 
+
+channelEnable8: true 
+
+channelEnable9: true 
+
+channelEnable10: true 
+
+channelEnable11: true 
+
+channelEnable12: true 
+
+channelEnable13: true 
+
+channelEnable14: true 
+
+channelEnable15: true 
+# Exclusive for SBND, ICARUS keep to 20
+triggerPulseWidth: 20 
+
+BoardChainNumber: 0 
+
+GetNextSleep: 10 
+
+InterruptLevel: 0 
+
+InterruptStatusID: 0 
+
+InterruptEventNumber: 1 
+
+CombineReadoutWindows: false 
+# register 0x8028
+dynamicRange: 0 
+# These are overwritten for each board in their separate files
+triggerThreshold0: 0 
+
+triggerThreshold1: 0 
+
+triggerThreshold2: 0 
+
+triggerThreshold3: 0 
+
+triggerThreshold4: 0 
+
+triggerThreshold5: 0 
+
+triggerThreshold6: 0 
+
+triggerThreshold7: 0 
+
+triggerThreshold8: 0 
+
+triggerThreshold9: 0 
+
+triggerThreshold10: 0 
+
+triggerThreshold11: 0 
+
+triggerThreshold12: 0 
+
+triggerThreshold13: 0 
+
+triggerThreshold14: 0 
+
+triggerThreshold15: 0 
+
+CircularBufferSize: 500e6 
+# added just because it's in the ICARUS config file
+TimeOffsetNanoSec: 0 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}
+circular_buffer_mode: true 
+
+receive_requests: true 
+# -- multicast request address
+request_address: "227.128.12.35" 
+# -- should match the private net
+multicast_interface_ip: "192.168.191.0" 
+# -- should match the private net 
+request_port: 3502 # UDP request port
+#window: request over a set time interval
+request_mode: window 
+# Alow use of NPT server time to form fragment timestamp and TriggerTimeTag
+UseTimeTagForTimeStamp: true 
+# Size of the request window (3 ms, covers 2 ms expected plus a little bit)
+request_window_width: 3000000 
+# Start 1.5 ms before
+request_window_offset: 1500000 
+# We want our fragments to appear multiple times in our request window if necessary
+request_windows_are_unique: true 
+# True for pull modes
+separate_data_thread: true 
+# Max waiting time for new fragments (2 second, too large/small?!) also not sure and keep commented
+stale_fragment_timeout: 10000000000 #Feb 22, 2023 AA, increased to 10s in hope to remove empty fragments
+# Max waiting time before the board reader sends the fragments in its buffer
+window_close_timeout_us: 10000e3 
+
+data_buffer_depth_fragments: 20000 
+
+data_buffer_depth_mb: 4000 
+# Leave it true to allow for temparature and busy status monitoring
+poll_hardware_status: true 
+# For ICARUS: currently 1s
+hardware_poll_interval_us: 1e6 
+# This is related to the HW monitoring, keep true!
+separate_monitoring_thread: true 
+# From CAEN manual: V1730(S) shuts itself down at 70(85) Celsius
+maxTempCelsius: 65 
+# Parameters for testing CAENV1730 CLOCK synchronization. If enabled, motherboard clock (or clock phase) is sent in output to TRG-OUT. This is for testing configurations only, do not use for physics quality runs!
+OutputClk: false 
+
+OutputClkPhase: false 
+
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,3,11-20" 
+
+fileName: "/scratch/log/br_%UID%_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+
+namespace: "icarus.icaruspmt00." 
+
+host: "192.168.191.31" 
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,3,11-20" 
+
+metricPluginType: "graphite" 
+
+port: 2003 
+
+reporting_interval: 15 
+
+}
+}
+}

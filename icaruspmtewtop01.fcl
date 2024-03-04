@@ -1,0 +1,106 @@
+ 
+#include "pmt_standard.fcl" 
+
+daq.fragment_receiver.fragment_id: 0x200C 
+
+daq.fragment_receiver.link: 4 
+
+daq.fragment_receiver.board_id: 12 
+
+daq.fragment_receiver.BaselineCh1: 14747 
+
+daq.fragment_receiver.BaselineCh2: 14747 
+
+daq.fragment_receiver.BaselineCh3: 14747 
+
+daq.fragment_receiver.BaselineCh4: 14747 
+
+daq.fragment_receiver.BaselineCh5: 14747 
+
+daq.fragment_receiver.BaselineCh6: 14747 
+
+daq.fragment_receiver.BaselineCh7: 14747 
+
+daq.fragment_receiver.BaselineCh8: 14747 
+
+daq.fragment_receiver.BaselineCh9: 14747 
+
+daq.fragment_receiver.BaselineCh10: 14747 
+
+daq.fragment_receiver.BaselineCh11: 14747 
+
+daq.fragment_receiver.BaselineCh12: 14747 
+
+daq.fragment_receiver.BaselineCh13: 14747 
+
+daq.fragment_receiver.BaselineCh14: 14747 
+
+daq.fragment_receiver.BaselineCh15: 14747 
+
+daq.fragment_receiver.BaselineCh16: 14500 
+
+daq.fragment_receiver.triggerThreshold0: 14357 
+
+daq.fragment_receiver.triggerThreshold1: 14357 
+
+daq.fragment_receiver.triggerThreshold2: 14357 
+
+daq.fragment_receiver.triggerThreshold3: 14357 
+
+daq.fragment_receiver.triggerThreshold4: 14357 
+
+daq.fragment_receiver.triggerThreshold5: 14357 
+
+daq.fragment_receiver.triggerThreshold6: 14357 
+
+daq.fragment_receiver.triggerThreshold7: 14357 
+
+daq.fragment_receiver.triggerThreshold8: 14357 
+
+daq.fragment_receiver.triggerThreshold9: 14357 
+
+daq.fragment_receiver.triggerThreshold10: 14357 
+
+daq.fragment_receiver.triggerThreshold11: 14357 
+
+daq.fragment_receiver.triggerThreshold12: 14357 
+
+daq.fragment_receiver.triggerThreshold13: 14357 
+
+daq.fragment_receiver.triggerThreshold14: 14357 
+
+daq.fragment_receiver.triggerThreshold15: 100 
+
+daq.metrics.graphite.namespace: "icarus.icaruspmtewtop01." 
+
+daq.fragment_receiver.channelPedestal0: 6935 
+
+daq.fragment_receiver.channelPedestal1: 6635 
+
+daq.fragment_receiver.channelPedestal2: 6773 
+
+daq.fragment_receiver.channelPedestal3: 6450 
+
+daq.fragment_receiver.channelPedestal4: 6926 
+
+daq.fragment_receiver.channelPedestal5: 6939 
+
+daq.fragment_receiver.channelPedestal6: 7346 
+
+daq.fragment_receiver.channelPedestal7: 7336 
+
+daq.fragment_receiver.channelPedestal8: 6759 
+
+daq.fragment_receiver.channelPedestal9: 7163 
+
+daq.fragment_receiver.channelPedestal10: 7065 
+
+daq.fragment_receiver.channelPedestal11: 6846 
+
+daq.fragment_receiver.channelPedestal12: 7169 
+
+daq.fragment_receiver.channelPedestal13: 7387 
+
+daq.fragment_receiver.channelPedestal14: 7744 
+
+daq.fragment_receiver.channelPedestal15: 7537 

@@ -1,0 +1,42 @@
+ 
+#include "EventBuilder_standard.fcl" 
+
+daq.metrics.graphite.namespace: "icarus.evb03." 
+
+daq.metrics.evbFile.fileName: "/daq/log/metrics/evb03_metrics.log" 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl3_run%R_%#_%to.root" 
+
+outputs.testOutput.fileName: "/data/test_daq/data_dl3_run%R_%#_%to.root" 
+
+process_name: DAQEVB03 
+
+outputs.normalOutputBNBMAJORITY.fileName: '/data/daq/data_dl3_fstrmBNBMAJORITY_run%R_%#_%to.root' 
+
+outputs.normalOutputNUMIMAJORITY.fileName: '/data/daq/data_dl3_fstrmNUMIMAJORITY_run%R_%#_%to.root' 
+
+outputs.normalOutputOffBeamBNBMAJORITY.fileName: '/data/daq/data_dl3_fstrmOffBeamBNBMAJORITY_run%R_%#_%to.root' 
+
+outputs.normalOutputOffBeamNUMIMAJORITY.fileName: '/data/daq/data_dl3_fstrmOffBeamNUMIMAJORITY_run%R_%#_%to.root' 
+
+outputs.normalOutputBNBMINBIAS.fileName: '/data/daq/data_dl3_fstrmBNBMINBIAS_run%R_%#_%to.root' 
+
+outputs.normalOutputNUMIMINBIAS.fileName: '/data/daq/data_dl3_fstrmNUMIMINBIAS_run%R_%#_%to.root' 
+
+outputs.normalOutputOffBeamBNBMINBIAS.fileName: '/data/daq/data_dl3_fstrmOffBeamBNBMINBIAS_run%R_%#_%to.root' 
+
+outputs.normalOutputOffBeamNUMIMINBIAS.fileName: '/data/daq/data_dl3_fstrmOffBeamNUMIMINBIAS_run%R_%#_%to.root' 
+
+outputs.normalOutputFILTERFAIL.fileName: '/data/daq/data_dl3_fstrmUNKNOWN_run%R_%#_%to.root' 
+
+outputs.testOutputBNB.fileName: '/data/test_daq/data_dl3_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.testOutputNUMI.fileName: '/data/test_daq/data_dl3_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputBNB.fileName: '/data/daq/data_dl3_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.normalOutputNUMI.fileName: '/data/daq/data_dl3_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputOFFBEAM.fileName: '/data/daq/data_dl3_fstrmOFFBEAM_run%R_%#_%to.root' 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl3_run%R_%#_%to.root" 

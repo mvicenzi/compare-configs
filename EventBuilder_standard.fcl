@@ -1,0 +1,666 @@
+ 
+#include "filters_standard.fcl" 
+
+services: {
+
+ArtdaqSharedMemoryServiceInterface: {
+
+service_provider: ArtdaqSharedMemoryService 
+
+}
+ArtdaqFragmentNamingServiceInterface: {
+
+service_provider: ArtdaqFragmentNamingService 
+
+helper_plugin: "Icarus" 
+
+}
+}
+daq: {
+
+event_builder: {
+
+art_analyzer_count: 10 
+
+stale_buffer_timeout_usec: 10000000 
+
+expected_fragments_per_event: 0 # Will be set by DAQInterface
+# Will be set by DAQInterface
+use_art: true 
+
+print_event_store_stats: true 
+
+buffer_count: 15 
+
+verbose: true 
+
+send_requests: true 
+
+request_address: "227.128.12.35" 
+
+request_port: 3502 
+
+multicast_interface_ip: "192.168.191.0" # -- should match the private net 
+# -- should match the private net 
+num_requests: 500 
+
+tcp_receive_buffer_size: 64000 
+
+routing_token_config: {
+
+use_routing_master: false 
+
+}
+sources: {
+
+}
+}
+metrics: {
+
+evbFile: {
+
+metricPluginType: "file" 
+##A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,11-20" 
+
+fileName: "/daq/log/metrics/evb00_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+##A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,3,11-20" 
+
+metricPluginType: "graphite" 
+
+reporting_interval: 15 
+
+host: "192.168.191.31" 
+
+port: 2003 
+
+namespace: "icarus.evb00." 
+
+}
+}
+}
+outputs: {
+
+normalOutput: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [pwrite] 
+
+}
+normalOutputBNBMAJORITY: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmBNBMAJORITY_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [bnbmajorityfullstream] 
+
+}
+normalOutputNUMIMAJORITY: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmNUMIMAJORITY_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [numimajorityfullstream] 
+
+}
+normalOutputOffBeamBNBMAJORITY: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmOffBeamBNBMAJORITY_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [offbeambnbmajorityfullstream] 
+
+}
+normalOutputOffBeamNUMIMAJORITY: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMAJORITY_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [offbeamnumimajorityfullstream] 
+
+}
+normalOutputBNBMINBIAS: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmBNBMINBIAS_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [bnbminbiasfullstream] 
+
+}
+normalOutputNUMIMINBIAS: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmNUMIMINBIAS_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [numiminbiasfullstream] 
+
+}
+normalOutputOffBeamBNBMINBIAS: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmOffBeamBNBMINBIAS_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [offbeambnbminbiasfullstream] 
+
+}
+normalOutputOffBeamNUMIMINBIAS: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMINBIAS_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [offbeamnumiminbiasfullstream] 
+
+}
+normalOutputFILTERFAIL: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmUNKNOWN_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [filterfailfullstream] 
+
+}
+normalOutputBNB: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [bnbstream] 
+
+}
+normalOutputNUMI: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [numistream] 
+
+}
+normalOutputOFFBEAM: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/daq/data_%p_fstrmOFFBEAM_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 #close files out a little faster for the prescaled stream
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [offbeamstream] 
+
+}
+testOutput: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/test_daq/data_%p_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 100 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [] 
+
+}
+testOutputBNB: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/test_daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [bnbstream] 
+
+}
+testOutputNUMI: {
+
+module_type: RootDAQOut 
+
+fileName: "/data/test_daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+
+fileProperties: {
+
+maxSubRuns: 1 
+
+maxRuns: 1 
+
+maxEvents: 50 
+
+}
+fastCloning: true 
+
+compressionLevel: 501 
+
+SelectEvents: [numistream] 
+
+}
+rootNetOutput: {
+
+module_type: RootNetOutput 
+
+broadcast_sends: true 
+
+nonblocking_sends: true 
+
+destinations: {
+
+}
+SelectEvents: [pdisp] 
+
+host_map: [{
+
+rank: -1 
+
+host: "icarus-evb01-daq" 
+
+}] 
+
+routing_table_config: {
+## True if using the Routing Manager
+use_routing_manager: false 
+
+route_on_request_mode: true 
+## Port that table updates should arrive on
+table_update_port: 35556 # default
+## Address that table updates should arrive on
+table_update_address: "227.128.12.35" 
+## Port that acknowledgements should be sent to
+table_acknowledge_port: 35557 # default
+## Host that acknowledgements should be sent to
+routing_manager_hostname: "icarus-evb01-daq" # default
+# default
+table_update_multicast_interface: "0.0.0.0" 
+## Time to wait (in ms) for a routing table update if the table is exhausted
+routing_timeout_ms: 1000 # default
+## Number of times to retry getting destination from routing table
+routing_retry_count: 5 # default
+
+}
+}
+}
+physics: {
+
+analyzers: {
+
+artdaqFragWatcher: {
+
+module_type: FragmentWatcher 
+
+fragment_ids: [] 
+
+}
+incEventAna: {
+
+module_type: "IncompleteEventAna" 
+
+}
+fragWatcher: {
+
+module_type: "IcarusFragmentWatcher" 
+
+}
+}
+producers: {
+
+}
+filters: {
+
+prescale100: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 100 
+
+prescaleOffset: 1 
+
+}
+prescale50: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 50 
+
+prescaleOffset: 1 
+
+}
+prescale10: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 10 
+
+prescaleOffset: 1 
+
+}
+prescale25: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 25 
+
+prescaleOffset: 1 
+
+}
+prescale5: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 5 
+
+prescaleOffset: 1 
+
+}
+prescale1: {
+
+module_type: "Prescaler" 
+
+prescaleFactor: 1 
+
+prescaleOffset: 0 
+
+}
+bnbmajorityfilter: @local::bnbmajorityfilter 
+
+numimajorityfilter: @local::numimajorityfilter 
+
+offbeambnbmajorityfilter: @local::offbeambnbmajorityfilter 
+
+offbeamnumimajorityfilter: @local::offbeamnumimajorityfilter 
+
+bnbminbiasfilter: @local::bnbminbiasfilter 
+
+numiminbiasfilter: @local::numiminbiasfilter 
+
+offbeambnbminbiasfilter: @local::offbeambnbminbiasfilter 
+
+offbeamnumiminbiasfilter: @local::offbeamnumiminbiasfilter 
+
+calibeastmajorityfilter: @local::calibeastmajorityfilter 
+
+calibwestmajorityfilter: @local::calibwestmajorityfilter 
+
+calibeastminbiasfilter: @local::calibeastminbiasfilter 
+
+calibwestminbiasfilter: @local::calibwestminbiasfilter 
+
+calibmajoritybothfilter: @local::calibmajoritybothfilter 
+
+calibminbiasbothfilter: @local::calibminbiasbothfilter 
+
+bnbfilter: {
+
+module_type: "ICARUSGateFilter" 
+
+raw_data_label: "daq" 
+
+gate_type: 1 #BNB
+
+}
+numifilter: {
+
+module_type: "ICARUSGateFilter" 
+
+raw_data_label: "daq" 
+
+gate_type: 2 #NUMI
+
+}
+}
+p1: [] 
+
+pwrite: [prescale1] 
+
+pdisp: [prescale25] 
+
+filterfailfullstream: ["!bnbmajorityfilter", "!numimajorityfilter", "!offbeambnbmajorityfilter", "!offbeamnumimajorityfilter", "!bnbminbiasfilter", "!numiminbiasfilter", "!offbeambnbminbiasfilter", "!offbeamnumiminbiasfilter", "!calibeastmajorityfilter", "!calibwestmajorityfilter", "!calibeastminbiasfilter", "!calibwestminbiasfilter", "!calibmajoritybothfilter", "!calibminbiasbothfilter"] 
+
+bnbmajorityfullstream: [bnbmajorityfilter] 
+
+numimajorityfullstream: [numimajorityfilter] 
+
+offbeambnbmajorityfullstream: [calibmajoritybothfilter] 
+
+offbeamnumimajorityfullstream: [calibmajoritybothfilter] 
+
+bnbminbiasfullstream: [bnbminbiasfilter] 
+
+numiminbiasfullstream: [numiminbiasfilter] 
+
+offbeambnbminbiasfullstream: [calibminbiasbothfilter] 
+
+offbeamnumiminbiasfullstream: [calibminbiasbothfilter] 
+
+bnbstream: [bnbfilter] 
+
+numistream: [numifilter] 
+
+offbeamstream: ["!bnbfilter", "!numifilter"] 
+
+trigger_paths: [pdisp, bnbmajorityfullstream, numimajorityfullstream, offbeambnbmajorityfullstream, offbeamnumimajorityfullstream, bnbminbiasfullstream, numiminbiasfullstream, offbeambnbminbiasfullstream, offbeamnumiminbiasfullstream, filterfailfullstream, pwrite] 
+
+a1: [incEventAna, artdaqFragWatcher, fragWatcher] 
+
+my_output_modules: ["rootNetOutput", "normalOutputOffBeamBNBMAJORITY", "normalOutputOffBeamBNBMINBIAS", "normalOutputFILTERFAIL"] 
+
+end_paths: [my_output_modules, a1] 
+
+}
+source: {
+
+module_type: ArtdaqInput 
+
+waiting_time: 2500000 
+
+resume_after_timeout: true 
+
+}
+process_name: DAQ 

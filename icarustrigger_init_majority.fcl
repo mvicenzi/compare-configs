@@ -1,0 +1,266 @@
+
+fpga_init_pars: {
+
+Veto: {
+
+name: "Veto beam gate [ns]" 
+
+value: "4000" 
+
+}
+MajLevelBeamCryo1: {
+
+name: "Majority level inside Beam Gate cryo1" 
+
+value: "5" 
+
+}
+MajLevelEnableCryo1: {
+
+name: "Majority level inside enable and outside Beam Gate cryo1" 
+
+value: "9" 
+
+}
+SlidingWindowCryo1: {
+
+name: "Sliding window option cryo1" 
+
+value: "Overlapping Window" 
+
+}
+MajLevelBeamCryo2: {
+
+name: "Majority level inside Beam Gate cryo2" 
+
+value: "5" 
+
+}
+MajLevelEnableCryo2: {
+
+name: "Majority level inside enable and outside Beam Gate cryo2" 
+
+value: "9" 
+
+}
+SlidingWindowCryo2: {
+
+name: "Sliding window option cryo2" 
+
+value: "Overlapping Window" 
+
+}
+MajorityTriggerType: {
+
+name: "Majority Trigger Type" 
+
+value: "majo1or2" 
+
+}
+RunType: {
+
+name: "Run type" 
+
+value: "Minimum Bias" 
+
+}
+}
+spexi_init_pars: {
+
+TPCTriggerDelay: {
+
+name: "TPC Trigger Delay/400" 
+
+value: "3250" 
+
+}
+GateSelection: {
+
+name: "Gate Selection [hex]" 
+
+value: "300" 
+
+}
+BNBBeamWidth: {
+
+name: "BNB Beam Gate Width [ns]" 
+
+value: "6200" 
+
+}
+BNBEnableWidth: {
+
+name: "BNB Enable Gate Width [ns]" 
+
+value: "2000000" 
+
+}
+NuMIBeamWidth: {
+
+name: "NuMI Beam Gate Width [ns]" 
+
+value: "14100" 
+
+}
+NuMIEnableWidth: {
+
+name: "NuMI Enable Gate Width [ns]" 
+
+value: "2000000" 
+
+}
+PreScaleBNBNuMI: {
+
+name: "Prescale BNB-NuMI Number" 
+
+value: "003C00C8" 
+
+}
+OffBeamBNBBeamWidth: {
+
+name: "OffBeam-BNB Gate Width [ns]" 
+
+value: "6200" 
+
+}
+OffBeamBNBEnableWidth: {
+
+name: "OffBeam-BNB Enable Gate Width [ns]" 
+
+value: "2000000" 
+
+}
+OffBeamNuMIBeamWidth: {
+
+name: "OffBeam-NuMI Gate Width [ns]" 
+
+value: "14100" 
+
+}
+OffBeamNuMIEnableWidth: {
+
+name: "OffBeam-NuMI Enable Gate Width [ns]" 
+
+value: "2000000" 
+
+}
+OffBeamGateRate: {
+
+name: "OffBeam Gate Rate" 
+
+value: "00010001" 
+
+}
+PreScaleOffBeam: {
+
+name: "Prescale OffBeam Number" 
+
+value: "00140014" 
+
+}
+ZeroBiasWidth: {
+
+name: "ZeroBias Gate Width [ns]" 
+
+value: "6200" 
+
+}
+ZeroBiasEnableWidth: {
+
+name: "ZeroBias Enable Gate Width [ns]" 
+
+value: "2000000" 
+
+}
+ZeroBiasFreq: {
+
+name: "ZeroBias Frequency Period [ns]" 
+
+value: "250000000" 
+
+}
+PrescaleZeroBias: {
+
+name: "Prescale ZeroBias Number" 
+
+value: "0014" 
+
+}
+PPSWidth: {
+
+name: "PPS Pulse Width [ns]" 
+
+value: "1000" 
+
+}
+MI12MACAddressLSB: {
+
+name: "MI12 MAC Address (LSB)" 
+
+value: "30E971C8" 
+
+}
+MI12MACAddressMSB: {
+
+name: "MI12 MAC Address (MSB)" 
+
+value: "0800" 
+
+}
+MI12Ethertype: {
+
+name: "MI12 Ethertype" 
+
+value: "5752" 
+
+}
+BNBBESOffset: {
+
+name: "BNB (gatedBES) Early Warning Offset" 
+
+value: "900" 
+
+}
+BNB1DOffset: {
+
+name: "BNB ($1D) Early Warning Offset" 
+
+value: "900" 
+
+}
+MI60MACAddressLSB: {
+
+name: "MI60 MAC Address (LSB)" 
+
+value: "30E93B4F" 
+
+}
+MI60MACAddressMSB: {
+
+name: "MI60 MAC Address (MSB)" 
+
+value: "0800" 
+
+}
+MI60Ethertype: {
+
+name: "MI60 Ethertype" 
+
+value: "5752" 
+
+}
+NuMIMIBSOffset: {
+
+name: "NuMI (MIBS$74) Early Warning Offset" 
+
+value: "700" 
+
+}
+NuMIADOffset: {
+
+name: "NUMI ($AD) Early Warning Offset" 
+
+value: "700" 
+
+}
+}
