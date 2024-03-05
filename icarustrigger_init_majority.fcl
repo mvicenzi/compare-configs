@@ -12,14 +12,14 @@ MajLevelBeamCryo1: {
 
 name: "Majority level inside Beam Gate cryo1" 
 
-value: "5" 
+value: "4" 
 
 }
 MajLevelEnableCryo1: {
 
 name: "Majority level inside enable and outside Beam Gate cryo1" 
 
-value: "9" 
+value: "7" 
 
 }
 SlidingWindowCryo1: {
@@ -33,14 +33,14 @@ MajLevelBeamCryo2: {
 
 name: "Majority level inside Beam Gate cryo2" 
 
-value: "5" 
+value: "4" 
 
 }
 MajLevelEnableCryo2: {
 
 name: "Majority level inside enable and outside Beam Gate cryo2" 
 
-value: "9" 
+value: "7" 
 
 }
 SlidingWindowCryo2: {
@@ -61,7 +61,7 @@ RunType: {
 
 name: "Run type" 
 
-value: "Minimum Bias" 
+value: "Majority" 
 
 }
 }
@@ -162,7 +162,7 @@ ZeroBiasWidth: {
 
 name: "ZeroBias Gate Width [ns]" 
 
-value: "6200" 
+value: "14100" 
 
 }
 ZeroBiasEnableWidth: {
@@ -176,7 +176,7 @@ ZeroBiasFreq: {
 
 name: "ZeroBias Frequency Period [ns]" 
 
-value: "250000000" 
+value: "31250000" 
 
 }
 PrescaleZeroBias: {
