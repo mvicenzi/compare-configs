@@ -51,7 +51,7 @@ graphite: {
 
 metricPluginType: "graphite" 
 
-reporting_interval: 15 
+reporting_interval: 10.0 
 
 host: "192.168.191.31" 
 

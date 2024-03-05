@@ -38,7 +38,7 @@ n_init_retries: 100
 n_init_timeout: 10000 #ms
 ### for now, use WR time for event timestamps, use system time if false
 use_wr_time: true 
-### AS: adjust on Nov 5 2021, after changing the wr server at mi12
+### DT: adjust on Jan 29 2023, after WR switch reboot on Jan 27 changed WR time by -1s 
 wr_time_offset_ns: 0 
 ### Add initialization string keys
 fpga_init_params: @local::fpga_init_pars 
@@ -60,7 +60,7 @@ brFile: {
 
 metricPluginType: "file" 
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 fileName: "/scratch/log/br_%UID%_metrics.log" 
 
@@ -73,11 +73,11 @@ send_process_metrics: true
 
 graphite: {
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
 
-reporting_interval: 15 
+reporting_interval: 10.0 
 
 host: "192.168.191.31" 
 

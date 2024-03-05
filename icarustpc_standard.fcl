@@ -76,9 +76,9 @@ brFile: {
 
 metricPluginType: "file" 
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
-fileName: "/daq/log/metrics/tpc_metrics.log" 
+fileName: "/daq/log/metrics/br_%p_metrics.log" 
 
 uniquify: true 
 
@@ -89,11 +89,11 @@ send_process_metrics: true
 
 graphite: {
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
 
-reporting_interval: 15 
+reporting_interval: 10.0 
 
 host: "192.168.191.31" 
 

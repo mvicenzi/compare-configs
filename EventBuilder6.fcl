@@ -37,6 +37,8 @@ outputs.normalOutputBNB.fileName: '/data/daq/data_dl6_fstrmBNB_run%R_%#_%to.root
 
 outputs.normalOutputNUMI.fileName: '/data/daq/data_dl6_fstrmNUMI_run%R_%#_%to.root' 
 
-outputs.normalOutputOFFBEAM.fileName: '/data/daq/data_dl6_fstrmOFFBEAM_run%R_%#_%to.root' 
+outputs.normalOutputOffBeamBNB.fileName: '/data/daq/data_dl6_fstrmOffBeamBNB_run%R_%#_%to.root' 
 
-outputs.normalOutput.fileName: "/data/daq/data_dl6_run%R_%#_%to.root" 
+outputs.normalOutputOffBeamNUMI.fileName: '/data/daq/data_dl6_fstrmOffBeamNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl6_fstrmOFFBEAM_run%R_%#_%to.root" 
