@@ -1,0 +1,65 @@
+
+daq: {
+
+fragment_receiver: {
+#Number of FEBs
+generated_fragments_per_event: 2 
+#fragment_id convention: SBN docdb 16111
+fragment_ids: [0x32d3, 0x32d4] 
+#Whether or not turn on bias HV on the individual FEBs. Size must be the same as FEBIDs
+TurnOnHV: [true, true] 
+#PPS signal delay w.r.t. GPS due to signal propagation time (primarily cable length)
+PPS_offset_ns: [0, 0] 
+
+ethernet_port: crt3 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}
+FEBConfigurationMAC211: {
+ 
+#include "icaruscrttop_feb211.fcl" 
+
+}
+FEBConfigurationMAC212: {
+ 
+#include "icaruscrttop_feb212.fcl" 
+
+}
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+
+fileName: "/daq/log/metrics/crttop03et_metrics.log" 
+
+uniquify: true 
+
+}
+send_system_metrics: true 
+
+send_process_metrics: true 
+
+graphite: {
+
+metricPluginType: "graphite" 
+
+reporting_interval: 15 
+
+host: "192.168.191.31" 
+
+port: 2003 
+
+namespace: "icarus.crttop03et." 
+
+}
+}
+} 
+#include "icarus_crttop_common.fcl" 
