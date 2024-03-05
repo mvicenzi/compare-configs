@@ -1,5 +1,3 @@
- 
-#include "filters_standard.fcl" 
 
 services: {
 
@@ -19,8 +17,6 @@ helper_plugin: "Icarus"
 daq: {
 
 event_builder: {
-
-art_analyzer_count: 10 
 
 stale_buffer_timeout_usec: 10000000 
 
@@ -74,7 +70,7 @@ send_process_metrics: true
 
 graphite: {
 ##A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
 
@@ -95,7 +91,7 @@ normalOutput: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_%to.root' 
 
 fileProperties: {
 
@@ -106,18 +102,18 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
 SelectEvents: [pwrite] 
 
 }
-normalOutputBNBMAJORITY: {
+laserOutput: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmBNBMAJORITY_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_%to.root' 
 
 fileProperties: {
 
@@ -125,197 +121,21 @@ maxSubRuns: 1
 
 maxRuns: 1 
 
-maxEvents: 50 #close files out a little faster for the prescaled stream 
+maxEvents: 500 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
-SelectEvents: [bnbmajorityfullstream] 
-
-}
-normalOutputNUMIMAJORITY: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmNUMIMAJORITY_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [numimajorityfullstream] 
-
-}
-normalOutputOffBeamBNBMAJORITY: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmOffBeamBNBMAJORITY_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [offbeambnbmajorityfullstream] 
-
-}
-normalOutputOffBeamNUMIMAJORITY: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMAJORITY_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [offbeamnumimajorityfullstream] 
-
-}
-normalOutputBNBMINBIAS: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmBNBMINBIAS_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [bnbminbiasfullstream] 
-
-}
-normalOutputNUMIMINBIAS: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmNUMIMINBIAS_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [numiminbiasfullstream] 
-
-}
-normalOutputOffBeamBNBMINBIAS: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmOffBeamBNBMINBIAS_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [offbeambnbminbiasfullstream] 
-
-}
-normalOutputOffBeamNUMIMINBIAS: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMINBIAS_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [offbeamnumiminbiasfullstream] 
-
-}
-normalOutputFILTERFAIL: {
-
-module_type: RootDAQOut 
-
-fileName: "/data/daq/data_%p_fstrmUNKNOWN_run%R_%#_%to.root" 
-
-fileProperties: {
-
-maxSubRuns: 1 
-
-maxRuns: 1 
-
-maxEvents: 50 #close files out a little faster for the prescaled stream 
-
-}
-fastCloning: true 
-
-compressionLevel: 501 
-
-SelectEvents: [filterfailfullstream] 
+SelectEvents: [pwrite] 
 
 }
 normalOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
 
 fileProperties: {
 
@@ -326,7 +146,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -337,7 +157,7 @@ normalOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
 
 fileProperties: {
 
@@ -348,7 +168,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -359,7 +179,7 @@ normalOutputOFFBEAM: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOFFBEAM_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOFFBEAM_%to.root' 
 
 fileProperties: {
 
@@ -370,7 +190,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -381,7 +201,7 @@ testOutput: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_%to.root' 
 
 fileProperties: {
 
@@ -392,7 +212,7 @@ maxRuns: 1
 maxEvents: 100 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -403,7 +223,7 @@ testOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
 
 fileProperties: {
 
@@ -414,7 +234,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -425,7 +245,7 @@ testOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
 
 fileProperties: {
 
@@ -436,7 +256,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -505,7 +325,7 @@ module_type: "IncompleteEventAna"
 }
 fragWatcher: {
 
-module_type: "IcarusFragmentWatcher" 
+module_type: "FragmentWatcher" 
 
 }
 }
@@ -514,22 +334,13 @@ producers: {
 }
 filters: {
 
-prescale100: {
-
-module_type: "Prescaler" 
-
-prescaleFactor: 100 
-
-prescaleOffset: 1 
-
-}
 prescale50: {
 
 module_type: "Prescaler" 
 
 prescaleFactor: 50 
 
-prescaleOffset: 1 
+prescaleOffset: 0 
 
 }
 prescale10: {
@@ -538,7 +349,7 @@ module_type: "Prescaler"
 
 prescaleFactor: 10 
 
-prescaleOffset: 1 
+prescaleOffset: 0 
 
 }
 prescale25: {
@@ -547,7 +358,7 @@ module_type: "Prescaler"
 
 prescaleFactor: 25 
 
-prescaleOffset: 1 
+prescaleOffset: 0 
 
 }
 prescale5: {
@@ -556,7 +367,7 @@ module_type: "Prescaler"
 
 prescaleFactor: 5 
 
-prescaleOffset: 1 
+prescaleOffset: 0 
 
 }
 prescale1: {
@@ -568,34 +379,6 @@ prescaleFactor: 1
 prescaleOffset: 0 
 
 }
-bnbmajorityfilter: @local::bnbmajorityfilter 
-
-numimajorityfilter: @local::numimajorityfilter 
-
-offbeambnbmajorityfilter: @local::offbeambnbmajorityfilter 
-
-offbeamnumimajorityfilter: @local::offbeamnumimajorityfilter 
-
-bnbminbiasfilter: @local::bnbminbiasfilter 
-
-numiminbiasfilter: @local::numiminbiasfilter 
-
-offbeambnbminbiasfilter: @local::offbeambnbminbiasfilter 
-
-offbeamnumiminbiasfilter: @local::offbeamnumiminbiasfilter 
-
-calibeastmajorityfilter: @local::calibeastmajorityfilter 
-
-calibwestmajorityfilter: @local::calibwestmajorityfilter 
-
-calibeastminbiasfilter: @local::calibeastminbiasfilter 
-
-calibwestminbiasfilter: @local::calibwestminbiasfilter 
-
-calibmajoritybothfilter: @local::calibmajoritybothfilter 
-
-calibminbiasbothfilter: @local::calibminbiasbothfilter 
-
 bnbfilter: {
 
 module_type: "ICARUSGateFilter" 
@@ -621,35 +404,17 @@ pwrite: [prescale1]
 
 pdisp: [prescale25] 
 
-filterfailfullstream: ["!bnbmajorityfilter", "!numimajorityfilter", "!offbeambnbmajorityfilter", "!offbeamnumimajorityfilter", "!bnbminbiasfilter", "!numiminbiasfilter", "!offbeambnbminbiasfilter", "!offbeamnumiminbiasfilter", "!calibeastmajorityfilter", "!calibwestmajorityfilter", "!calibeastminbiasfilter", "!calibwestminbiasfilter", "!calibmajoritybothfilter", "!calibminbiasbothfilter"] 
-
-bnbmajorityfullstream: [bnbmajorityfilter] 
-
-numimajorityfullstream: [numimajorityfilter] 
-
-offbeambnbmajorityfullstream: [calibmajoritybothfilter] 
-
-offbeamnumimajorityfullstream: [calibmajoritybothfilter] 
-
-bnbminbiasfullstream: [bnbminbiasfilter] 
-
-numiminbiasfullstream: [numiminbiasfilter] 
-
-offbeambnbminbiasfullstream: [calibminbiasbothfilter] 
-
-offbeamnumiminbiasfullstream: [calibminbiasbothfilter] 
-
 bnbstream: [bnbfilter] 
 
 numistream: [numifilter] 
 
 offbeamstream: ["!bnbfilter", "!numifilter"] 
 
-trigger_paths: [pdisp, bnbmajorityfullstream, numimajorityfullstream, offbeambnbmajorityfullstream, offbeamnumimajorityfullstream, bnbminbiasfullstream, numiminbiasfullstream, offbeambnbminbiasfullstream, offbeamnumiminbiasfullstream, filterfailfullstream, pwrite] 
+trigger_paths: [pdisp, pwrite] 
 
 a1: [incEventAna, artdaqFragWatcher, fragWatcher] 
 
-my_output_modules: ["rootNetOutput", "normalOutputOffBeamBNBMAJORITY", "normalOutputOffBeamBNBMINBIAS", "normalOutputFILTERFAIL"] 
+my_output_modules: [rootNetOutput, laserOutput] 
 
 end_paths: [my_output_modules, a1] 
 

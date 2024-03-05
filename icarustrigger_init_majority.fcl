@@ -19,14 +19,14 @@ MajLevelEnableCryo1: {
 
 name: "Majority level inside enable and outside Beam Gate cryo1" 
 
-value: "9" 
+value: "10" 
 
 }
 SlidingWindowCryo1: {
 
 name: "Sliding window option cryo1" 
 
-value: "Overlapping Window" 
+value: "Separated Window" 
 
 }
 MajLevelBeamCryo2: {
@@ -40,14 +40,14 @@ MajLevelEnableCryo2: {
 
 name: "Majority level inside enable and outside Beam Gate cryo2" 
 
-value: "9" 
+value: "10" 
 
 }
 SlidingWindowCryo2: {
 
 name: "Sliding window option cryo2" 
 
-value: "Overlapping Window" 
+value: "Separated Window" 
 
 }
 MajorityTriggerType: {
@@ -78,7 +78,7 @@ GateSelection: {
 
 name: "Gate Selection [hex]" 
 
-value: "300" 
+value: "100" 
 
 }
 BNBBeamWidth: {
@@ -162,7 +162,7 @@ ZeroBiasWidth: {
 
 name: "ZeroBias Gate Width [ns]" 
 
-value: "6200" 
+value: "1600" 
 
 }
 ZeroBiasEnableWidth: {
@@ -176,14 +176,14 @@ ZeroBiasFreq: {
 
 name: "ZeroBias Frequency Period [ns]" 
 
-value: "250000000" 
+value: "100000000" 
 
 }
 PrescaleZeroBias: {
 
 name: "Prescale ZeroBias Number" 
 
-value: "0014" 
+value: "0064" 
 
 }
 PPSWidth: {

@@ -22,7 +22,7 @@ expected_events_per_bunch: 1
 
 print_event_store_stats: true 
 
-buffer_count: 16 
+buffer_count: 20 
 
 event_queue_depth: 2 
 
@@ -63,7 +63,7 @@ aggFile: {
 
 metricPluginType: "file" 
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 fileName: "/daq/log/metrics/disp00_metrics.log" 
 
@@ -72,7 +72,7 @@ uniquify: true
 }
 graphite: {
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
 
