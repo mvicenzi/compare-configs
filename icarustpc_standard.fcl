@@ -21,7 +21,7 @@ ChannelsPerBoard: 64
 # BoardIDs: [ 0x100, 0x101, 0x102, 0x103, 0x104, 0x105, 0x106, 0x107, 0x108 ]
 CrateID: 0x1 
 
-CompressionScheme: 0 
+CompressionScheme: 1
 
 VetoPort: 7654 
 
