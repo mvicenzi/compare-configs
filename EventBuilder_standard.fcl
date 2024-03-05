@@ -104,7 +104,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -126,7 +126,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -148,7 +148,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -170,7 +170,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -192,7 +192,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -214,7 +214,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -236,7 +236,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -258,7 +258,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -280,7 +280,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -302,7 +302,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -324,7 +324,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -346,7 +346,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -368,7 +368,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -390,7 +390,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -412,7 +412,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -434,7 +434,7 @@ maxRuns: 1
 maxEvents: 100 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -456,7 +456,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -478,7 +478,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
