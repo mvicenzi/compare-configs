@@ -61,7 +61,7 @@ RunType: {
 
 name: "Run type" 
 
-value: "Minimum Bias" 
+value: "Majority" 
 
 }
 }
@@ -78,7 +78,7 @@ GateSelection: {
 
 name: "Gate Selection [hex]" 
 
-value: "300" 
+value: "7BCFF" 
 
 }
 BNBBeamWidth: {
@@ -162,7 +162,7 @@ ZeroBiasWidth: {
 
 name: "ZeroBias Gate Width [ns]" 
 
-value: "6200" 
+value: "1600" 
 
 }
 ZeroBiasEnableWidth: {
@@ -176,14 +176,14 @@ ZeroBiasFreq: {
 
 name: "ZeroBias Frequency Period [ns]" 
 
-value: "250000000" 
+value: "1000000000" 
 
 }
 PrescaleZeroBias: {
 
 name: "Prescale ZeroBias Number" 
 
-value: "0014" 
+value: "0064" 
 
 }
 PPSWidth: {
