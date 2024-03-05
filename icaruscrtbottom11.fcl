@@ -8,3 +8,13 @@ daq.fragment_receiver.generated_fragments_per_event: 9
 daq.metrics.graphite.namespace: "icarus.crtbottom11." 
 
 daq.metrics.brFile.fileName: "/scratch/log/crtbottom11_%UID%_metrics.log" 
+
+daq.fragment_receiver.max_fragment_size_bytes: 1000000 
+
+daq.fragment_receiver.data_buffer_depth_fragments: 40000 
+
+daq.fragment_receiver.data_buffer_depth_mb: 40000 
+
+daq.fragment_receiver.window_close_timeout_us: 5000000 
+
+daq.fragment_receiver.stale_fragment_timeout: 5000000000 
