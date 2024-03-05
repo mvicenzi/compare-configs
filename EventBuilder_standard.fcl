@@ -56,7 +56,7 @@ metrics: {
 evbFile: {
 
 metricPluginType: "file" 
-##A string containing a comma-separated list of levels to enable. Ranges are supported.
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
 level_string: "1,2,11-20" 
 
 fileName: "/daq/log/metrics/evb00_metrics.log" 
@@ -69,7 +69,7 @@ send_system_metrics: true
 send_process_metrics: true 
 
 graphite: {
-##A string containing a comma-separated list of levels to enable. Ranges are supported.
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
 level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
@@ -91,7 +91,7 @@ normalOutput: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/daq/data_run%R_${app_name}_%#_%to.root' 
+fileName: "/data/daq/data_%p_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -102,7 +102,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -113,7 +113,7 @@ laserOutput: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/daq/data_run%R_${app_name}_%#_%to.root' 
+fileName: "/data/daq/data_%p_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -124,7 +124,7 @@ maxRuns: 1
 maxEvents: 500 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -135,7 +135,7 @@ normalOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
+fileName: "/data/daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -146,7 +146,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -157,7 +157,7 @@ normalOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
+fileName: "/data/daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -168,7 +168,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -179,7 +179,7 @@ normalOutputOFFBEAM: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOFFBEAM_%to.root' 
+fileName: "/data/daq/data_%p_fstrmOFFBEAM_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -190,7 +190,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -201,7 +201,7 @@ testOutput: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/test_daq/data_run%R_${app_name}_%#_%to.root' 
+fileName: "/data/test_daq/data_%p_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -212,7 +212,7 @@ maxRuns: 1
 maxEvents: 100 
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -223,7 +223,7 @@ testOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
+fileName: "/data/test_daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -234,7 +234,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 
@@ -245,7 +245,7 @@ testOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
+fileName: "/data/test_daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
 
 fileProperties: {
 
@@ -256,7 +256,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: false 
+fastCloning: true 
 
 compressionLevel: 501 
 

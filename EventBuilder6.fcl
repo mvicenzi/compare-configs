@@ -5,4 +5,22 @@ daq.metrics.graphite.namespace: "icarus.evb06."
 
 daq.metrics.evbFile.fileName: "/daq/log/metrics/evb06_metrics.log" 
 
+outputs.normalOutput.fileName: "/data/daq/data_dl6_run%R_%#_%to.root" 
+
+outputs.testOutput.fileName: "/data/test_daq/data_dl6_run%R_%#_%to.root" 
+
+physics.my_output_modules: [normalOutput, rootNetOutput] 
+
 process_name: DAQEVB06 
+
+outputs.testOutputBNB.fileName: '/data/test_daq/data_dl6_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.testOutputNUMI.fileName: '/data/test_daq/data_dl6_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputBNB.fileName: '/data/daq/data_dl6_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.normalOutputNUMI.fileName: '/data/daq/data_dl6_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputOFFBEAM.fileName: '/data/daq/data_dl6_fstrmOFFBEAM_run%R_%#_%to.root' 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl6_run%R_%#_%to.root" 

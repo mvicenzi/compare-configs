@@ -1,0 +1,24 @@
+ 
+#include "EventBuilder_standard.fcl" 
+
+daq.metrics.graphite.namespace: "icarus.evb18." 
+
+daq.metrics.evbFile.fileName: "/daq/log/metrics/evb18_metrics.log" 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl18_run%R_%#_%to.root" 
+
+outputs.testOutput.fileName: "/data/test_daq/data_dl18_run%R_%#_%to.root" 
+#physics.my_output_modules: [ testOutput, rootNetOutput ]
+process_name: DAQEVB18 
+
+outputs.testOutputBNB.fileName: '/data/test_daq/data_dl18_fstrmBNB_run%R_%#_%to.root' 
+#_%to.root'
+outputs.testOutputNUMI.fileName: '/data/test_daq/data_dl18_fstrmNUMI_run%R_%#_%to.root' 
+#_%to.root'
+outputs.normalOutputBNB.fileName: '/data/daq/data_dl18_fstrmBNB_run%R_%#_%to.root' 
+#_%to.root'
+outputs.normalOutputNUMI.fileName: '/data/daq/data_dl18_fstrmNUMI_run%R_%#_%to.root' 
+#_%to.root'
+outputs.normalOutputOFFBEAM.fileName: '/data/daq/data_dl18_fstrmOFFBEAM_run%R_%#_%to.root' 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl18_run%R_%#_%to.root" 

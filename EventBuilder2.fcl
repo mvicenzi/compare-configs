@@ -5,4 +5,20 @@ daq.metrics.graphite.namespace: "icarus.evb02."
 
 daq.metrics.evbFile.fileName: "/daq/log/metrics/evb02_metrics.log" 
 
+outputs.normalOutput.fileName: "/data/daq/data_dl2_run%R_%#_%to.root" 
+
+outputs.testOutput.fileName: "/data/test_daq/data_dl2_run%R_%#_%to.root" 
+
 process_name: DAQEVB02 
+
+outputs.testOutputBNB.fileName: '/data/test_daq/data_dl2_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.testOutputNUMI.fileName: '/data/test_daq/data_dl2_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputBNB.fileName: '/data/daq/data_dl2_fstrmBNB_run%R_%#_%to.root' 
+
+outputs.normalOutputNUMI.fileName: '/data/daq/data_dl2_fstrmNUMI_run%R_%#_%to.root' 
+
+outputs.normalOutputOFFBEAM.fileName: '/data/daq/data_dl2_fstrmOFFBEAM_run%R_%#_%to.root' 
+
+outputs.normalOutput.fileName: "/data/daq/data_dl2_run%R_%#_%to.root" 
