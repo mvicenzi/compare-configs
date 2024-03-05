@@ -12,42 +12,42 @@ MajLevelBeamCryo1: {
 
 name: "Majority level inside Beam Gate cryo1" 
 
-value: "5" 
+value: "4" 
 
 }
 MajLevelEnableCryo1: {
 
 name: "Majority level inside enable and outside Beam Gate cryo1" 
 
-value: "9" 
+value: "7" 
 
 }
 SlidingWindowCryo1: {
 
 name: "Sliding window option cryo1" 
 
-value: "Overlapping Window" 
+value: "Adders" 
 
 }
 MajLevelBeamCryo2: {
 
 name: "Majority level inside Beam Gate cryo2" 
 
-value: "5" 
+value: "4" 
 
 }
 MajLevelEnableCryo2: {
 
 name: "Majority level inside enable and outside Beam Gate cryo2" 
 
-value: "9" 
+value: "7" 
 
 }
 SlidingWindowCryo2: {
 
 name: "Sliding window option cryo2" 
 
-value: "Overlapping Window" 
+value: "Adders" 
 
 }
 MajorityTriggerType: {
