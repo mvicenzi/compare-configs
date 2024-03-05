@@ -1,8 +1,0 @@
- 
-#include "EventBuilder_standard.fcl" 
-
-daq.metrics.graphite.namespace: "icarus.evb10." 
-
-daq.metrics.evbFile.fileName: "/daq/log/metrics/evb10_metrics.log" 
-
-process_name: DAQEVB10 
