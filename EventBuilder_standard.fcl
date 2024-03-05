@@ -74,7 +74,7 @@ send_process_metrics: true
 
 graphite: {
 ##A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,3,11-20" 
+level_string: "1,2,11-20" 
 
 metricPluginType: "graphite" 
 
@@ -95,7 +95,7 @@ normalOutput: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_%to.root' 
 
 fileProperties: {
 
@@ -117,7 +117,7 @@ normalOutputBNBMAJORITY: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmBNBMAJORITY_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmBNBMAJORITY_%to.root' 
 
 fileProperties: {
 
@@ -139,7 +139,7 @@ normalOutputNUMIMAJORITY: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmNUMIMAJORITY_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmNUMIMAJORITY_%to.root' 
 
 fileProperties: {
 
@@ -161,7 +161,7 @@ normalOutputOffBeamBNBMAJORITY: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOffBeamBNBMAJORITY_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOffBeamBNBMAJORITY_%to.root' 
 
 fileProperties: {
 
@@ -183,7 +183,7 @@ normalOutputOffBeamNUMIMAJORITY: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMAJORITY_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOffBeamNUMIMAJORITY_%to.root' 
 
 fileProperties: {
 
@@ -205,7 +205,7 @@ normalOutputBNBMINBIAS: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmBNBMINBIAS_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmBNBMINBIAS_%to.root' 
 
 fileProperties: {
 
@@ -227,7 +227,7 @@ normalOutputNUMIMINBIAS: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmNUMIMINBIAS_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmNUMIMINBIAS_%to.root' 
 
 fileProperties: {
 
@@ -249,7 +249,7 @@ normalOutputOffBeamBNBMINBIAS: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOffBeamBNBMINBIAS_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOffBeamBNBMINBIAS_%to.root' 
 
 fileProperties: {
 
@@ -271,7 +271,7 @@ normalOutputOffBeamNUMIMINBIAS: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOffBeamNUMIMINBIAS_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOffBeamNUMIMINBIAS_%to.root' 
 
 fileProperties: {
 
@@ -293,7 +293,7 @@ normalOutputFILTERFAIL: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmUNKNOWN_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmUNKNOWN_%to.root' 
 
 fileProperties: {
 
@@ -315,7 +315,7 @@ normalOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
 
 fileProperties: {
 
@@ -337,7 +337,7 @@ normalOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
 
 fileProperties: {
 
@@ -359,7 +359,7 @@ normalOutputOFFBEAM: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/daq/data_%p_fstrmOFFBEAM_run%R_%#_%to.root" 
+fileName: '/data/daq/data_run%R_${app_name}_%#_fstrmOFFBEAM_%to.root' 
 
 fileProperties: {
 
@@ -381,7 +381,7 @@ testOutput: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_%to.root' 
 
 fileProperties: {
 
@@ -403,7 +403,7 @@ testOutputBNB: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_fstrmBNB_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmBNB_%to.root' 
 
 fileProperties: {
 
@@ -425,7 +425,7 @@ testOutputNUMI: {
 
 module_type: RootDAQOut 
 
-fileName: "/data/test_daq/data_%p_fstrmNUMI_run%R_%#_%to.root" 
+fileName: '/data/test_daq/data_run%R_${app_name}_%#_fstrmNUMI_%to.root' 
 
 fileProperties: {
 
