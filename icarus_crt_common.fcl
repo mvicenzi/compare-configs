@@ -53,6 +53,6 @@ daq.fragment_receiver.max_fragment_size_bytes: 0x1000000
 
 daq.fragment_receiver.window_close_timeout_us: 10e6 
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-daq.metrics.graphite.level_string: "1,2,11-20" 
+daq.metrics.graphite.level_string: "1,2,3,11-20" 
 #A string containing a comma-separated list of levels to enable. Ranges are supported.
-daq.metrics.brFile.level_string: "1,2,11-20" 
+daq.metrics.brFile.level_string: "1,2,3,11-20" 

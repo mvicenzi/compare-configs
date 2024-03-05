@@ -61,7 +61,7 @@ evbFile: {
 
 metricPluginType: "file" 
 ##A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,11-20" 
+level_string: "1,2,3,11-20" 
 
 fileName: "/daq/log/metrics/evb00_metrics.log" 
 
@@ -74,7 +74,7 @@ send_process_metrics: true
 
 graphite: {
 ##A string containing a comma-separated list of levels to enable. Ranges are supported.
-level_string: "1,2,11-20" 
+level_string: "1,2,3,11-20" 
 
 metricPluginType: "graphite" 
 
@@ -106,7 +106,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -128,7 +128,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -150,7 +150,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -172,7 +172,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -194,7 +194,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -216,7 +216,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -238,7 +238,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -260,7 +260,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -282,7 +282,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -304,7 +304,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -326,7 +326,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -348,7 +348,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -370,7 +370,7 @@ maxRuns: 1
 maxEvents: 50 #close files out a little faster for the prescaled stream
 
 }
-fastCloning: true 
+fastCloning: false
 
 compressionLevel: 501 
 
@@ -414,7 +414,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
@@ -436,7 +436,7 @@ maxRuns: 1
 maxEvents: 50 
 
 }
-fastCloning: true 
+fastCloning: false 
 
 compressionLevel: 501 
 
