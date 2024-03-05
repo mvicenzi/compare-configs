@@ -1,0 +1,64 @@
+
+daq: {
+
+fragment_receiver: {
+
+generator: WhiteRabbitReadout 
+
+fragment_type: WhiteRabbitEvent 
+
+max_fragment_size_bytes: 1000000 
+
+fragment_ids: [0x5200] 
+
+sends_no_fragments: true 
+
+board_id: 0 
+# Icarus 0x5200, SBND 0xD200
+fragmentId: 0x5200 
+
+device: wr0 
+
+generated_fragments_per_event: 0 
+# The value 0x1F means listen to all five I/O channels
+channelMask: 0x1F 
+
+destinations: {
+
+}
+routing_table_config: {
+
+use_routing_master: false 
+
+}
+}
+metrics: {
+
+brFile: {
+
+metricPluginType: "file" 
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,11-20" 
+
+fileName: "/daq/log/metrics/br_%UID%_metrics.log" 
+
+uniquify: true 
+
+}
+graphite: {
+
+namespace: "icarus.daq02." 
+
+host: "192.168.191.31" 
+#A string containing a comma-separated list of levels to enable. Ranges are supported.
+level_string: "1,2,11-20" 
+
+metricPluginType: "graphite" 
+
+port: 2003 
+
+reporting_interval: 15 
+
+}
+}
+}
